@@ -19,16 +19,18 @@ async function consultaCEP(cep) {
     estado: resposta.estado,
     uf: resposta.uf,
     regiao: resposta.regiao,
-   
   };
 
+inserirDados(cepUsuario)
+}
+
+consultaCEP(enderecoUsuario.cep);
+
+function inserirDados(cepUsuario) {
   enderecoUsuario.rua.innerText = cepUsuario.logradouro;
   enderecoUsuario.bairro.innerText = cepUsuario.bairro;
   enderecoUsuario.cidade.innerText = cepUsuario.cidade;
   enderecoUsuario.estado.innerText = cepUsuario.estado;
   enderecoUsuario.uf.innerText = cepUsuario.uf;
   enderecoUsuario.regiao.innerText = cepUsuario.regiao;
-
-  console.log(cepUsuario);
 }
-consultaCEP(enderecoUsuario.cep);
